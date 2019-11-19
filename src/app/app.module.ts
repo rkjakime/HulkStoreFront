@@ -15,6 +15,7 @@ import { AuthenticationService } from './shared/authentication.service';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

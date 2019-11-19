@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { ProductComponent } from '../product/product.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,6 @@ export class AuthenticationService {
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(res => {
-        alert('Successfully signed in!');
       })
       .catch(err => {
         alert('Something is wrong:' + err.message);
@@ -46,4 +46,6 @@ export class AuthenticationService {
       .auth
       .signOut();
   }
+
+
 }
